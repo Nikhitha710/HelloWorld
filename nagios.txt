@@ -1,0 +1,11 @@
+ssh -i "WebApp.pem" ubuntu@ec2-50-19-4-109.compute-1.amazonaws.com
+
+
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+docker stop nagiosdemo
+
+docker rm nagiosdemo
+docker images
+
+docker rmijasonrivers/nagios:latest
